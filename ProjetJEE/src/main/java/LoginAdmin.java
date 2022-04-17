@@ -35,7 +35,7 @@ public class LoginAdmin extends HttpServlet {
 	 Class.forName("com.mysql.cj.jdbc.Driver");
 		String user="root";
 		String url= "jdbc:mysql://127.0.0.1/ProjetJEE";
-		String pwd="1299";
+		String pwd="1234";
 		Connection connexion =  DriverManager.getConnection(url, user, pwd);
 		return connexion;
     }
