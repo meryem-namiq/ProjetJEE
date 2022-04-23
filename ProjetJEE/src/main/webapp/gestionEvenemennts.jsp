@@ -60,7 +60,7 @@ background: #fff;
 padding: 20px;
 box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
-.table-title {
+.table-title { 
 padding-bottom: 10px;
 margin: 0 0 10px;
 }
