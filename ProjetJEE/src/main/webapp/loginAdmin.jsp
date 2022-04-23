@@ -81,14 +81,12 @@ https://templatemo.com/tm-573-eduwell
           
         </div>
         <div class="col-lg-5">
-          <form id="contact" action="LoginAdmin" method="get">
+          <form id="contact" action="LoginAdmin" method="POST">
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-heading">
-                  <h6>Contact us</h6>
-                  <h4>Say <em>Hello</em></h4>
-                  <p>IF you need a working contact form by PHP script, please visit TemplateMo's contact page for more info.</p>
-                </div>
+                  <h4><em>Bonjour</em></h4>
+                  </div>
               </div>
               <div class="col-lg-12">
                 <fieldset>
@@ -102,7 +100,8 @@ https://templatemo.com/tm-573-eduwell
               </div>
               <div class="col-lg-12">
                 <fieldset>
-                  <input type="submit" id="seConnecter" value="Se connecter" class="main-gradient-button"/>
+                  <input type="submit" style="background: rgb(71, 87, 218);background: linear-gradient(-145deg, rgba(71, 87, 218,1) 0%, rgba(246,191,159,1) 100%);font-size: 13px;
+  color: #fff;" id="seConnecter" value="Se connecter" class="btn"/>
                 </fieldset>
               </div>
             </div>

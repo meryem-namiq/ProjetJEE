@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import Controlleur.LoginAdminDao;
+import Controlleur.LoginDao;
 import Modele.Admin;
 
 /**
@@ -38,6 +38,14 @@ public class LoginAdmin extends HttpServlet {
  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
+	
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		String login = request.getParameter("email");
 		String password = request.getParameter("password");
 		
@@ -47,29 +55,22 @@ public class LoginAdmin extends HttpServlet {
         loginBean.setUserName(login); //setting the username and password through the loginBean object then only you can get it in future.
          loginBean.setPassword(password);
  
-        LoginAdminDao loginDao = new LoginAdminDao(); //creating object for LoginDao. This class contains main logic of the application.
+        LoginDao loginDao = new LoginDao(); //creating object for LoginDao. This class contains main logic of the application.
  
         String userValidate = loginDao.authenticateAdmin(loginBean); //Calling authenticateUser function
  
         if(userValidate.equals("SUCCESS")) //If function returns success string then user will be rooted to Home page
          {
              request.setAttribute("userName", login); //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/adminMenu.jsp");
 			 dispatcher.forward(request, response);
          }
          else
          {
              request.setAttribute("errMessage", userValidate); //If authenticateUser() function returnsother than SUCCESS string it will be sent to Login page again. Here the error message returned from function has been stored in a errMessage key.
-             request.getRequestDispatcher("/Login.jsp").forward(request, response);//forwarding the request
-         }
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/loginAdmin.jsp");
+			 dispatcher.forward(request, response);
+                      }
 	}
 
 }

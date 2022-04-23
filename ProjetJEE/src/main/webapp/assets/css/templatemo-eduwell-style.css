@@ -17,7 +17,6 @@ Table of contents
 06. features
 07. testimonials
 08. contact
-09. footer
 10. preloader
 11. search
 12. portfolio
@@ -1093,6 +1092,15 @@ contact us
 --------------------------------------------- 
 */
 
+section.admindesign {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+  position: relative;
+}
+
+
 section.contact-us {
   background-image: url(../images/footer-bg.png);
   background-position: center center;
@@ -1196,7 +1204,7 @@ section.contact-us #contact textarea {
   margin-bottom: 30px;
 }
 
-section.contact-us #contact button {
+section.contact-us #seConnecter input.btn[type="submit"] {
   float: right;
   font-size: 13px;
   color: #fff;
@@ -1213,7 +1221,7 @@ section.contact-us #contact button {
   outline: none;
 }
 
-section.contact-us #contact button:hover {
+section.contact-us #seConnecter input.btn[type="submit"]:hover {
   opacity: 0.9;
 }
 
