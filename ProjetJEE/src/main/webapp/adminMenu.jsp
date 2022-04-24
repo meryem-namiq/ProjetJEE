@@ -47,8 +47,8 @@ https://templatemo.com/tm-573-eduwell
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
-                    <li><a href="index.jsp" class="active">Accueil</a></li>
-                    <li><a href="index.jsp">Gerer les evenemnts</a></li>
+                    <li><a href="adminMenu.jsp" class="active">Accueil</a></li>
+                    <li><a href="gestionEvenemennts.jsp">Gerer les evenemnts</a></li>
                     <li><a href="index.jsp">Gerer les participants</a></li>
                     <li><a href="index.jsp">Gerer les commités</a></li> 
                     <li><a href="index.jsp">chiii</a></li> 
