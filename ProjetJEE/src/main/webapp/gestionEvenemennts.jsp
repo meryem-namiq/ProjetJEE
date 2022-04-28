@@ -221,9 +221,9 @@ ArrayList<Evenement> evenements = evenementDao.selectAll();
 				 <td>
 		 
 				
-<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-<a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-<a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+<a class="add"  data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+<a class="edit"  data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+<a class="delete"  data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
 </td>
                 </tr>
                 <% } } %>
@@ -260,10 +260,10 @@ ArrayList<Evenement> evenements = evenementDao.selectAll();
     		$(this).attr("disabled", "disabled");
     		var index = $("table tbody tr:last-child").index();
             var row = '<tr>' +
-                '<td><input type="text" class="form-control" name="name" id="name"></td>' +
-                '<td><input type="text" class="form-control" name="department" id="department"></td>' +
-                '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
-                '<td><input type="text" class="form-control" name="phone" id="phone"></td>' +
+                '<td><input type="text" class="form-control" name="titre" id="titre"></td>' +
+                '<td><input type="text" class="form-control" name="date" id="date"></td>' +
+                '<td><input type="text" class="form-control" name="place" id="place"></td>' +
+                '<td><input type="text" class="form-control" name="description" id="description"></td>' +
     			'<td>' + actions + '</td>' +
             '</tr>';
         	$("table").append(row);		
@@ -289,24 +289,75 @@ ArrayList<Evenement> evenements = evenementDao.selectAll();
     			});			
     			$(this).parents("tr").find(".add, .edit").toggle();
     			$(".add-new").removeAttr("disabled");
+    			
+    			 var url = new URL("http://localhost:8081/ProjetJEE/gestionEvenemennts.jsp");
+    			 var iid = $(this).parents("tr").attr("data-name");
+    	            url.searchParams.append('idd',iid);
+    	            url.searchParams.append('titre',$(this).closest('tr').find('td:eq(0)').text());
+    	            url.searchParams.append('place',$(this).closest('tr').find('td:eq(2)').text());
+    	            url.searchParams.append('description',$(this).closest('tr').find('td:eq(3)').text());
+    				window.history.pushState({}, '', url);
+    				
+    				<% {
+    	    			EvenementDao evenementDao = new EvenementDao();
+    	    			String titre = request.getParameter("titre");
+    	    			String place = request.getParameter("place");
+    	    			String description = request.getParameter("description");
+    	    			if(titre!=null  || place!=null || description!=null )
+    	                	evenementDao.insert(titre,place,description);
+    	    			}%>
+    				
+    			
+    			
     		}		
         });
     	// Edit row on edit button click
     	$(document).on("click", ".edit", function(){		
             $(this).parents("tr").find("td:not(:last-child)").each(function(){
-    			$(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
-    		});		
+    			$(this).html('<input type="text" class="form-control" name="name[]" id="name[]" value="' + $(this).text() + '">');
+    		});	
+      
+       
     		$(this).parents("tr").find(".add, .edit").toggle();
     		$(".add-new").attr("disabled", "disabled");
+    		
+    		var url = new URL("http://localhost:8081/ProjetJEE/gestionEvenemennts.jsp");
+    		var iid = $(this).parents("tr").attr("data-name");
+            url.searchParams.append('idd',iid);
+            url.searchParams.append('titre',$(this).closest('tr').find('td:eq(0)').text());
+			window.history.pushState({}, '', url);
+			
+			<% {
+    			EvenementDao evenementDao = new EvenementDao();
+    			String idd = request.getParameter("idd");
+    			String titre = request.getParameter("titre");
+    			String place = request.getParameter("place");
+    			String description = request.getParameter("description");
+    			if ( idd!=null)
+                	evenementDao.update(Integer.parseInt(idd),titre,place,description);
+    			}%>
+			
+
+			
+			
         });
     	// Delete row on delete button click
     	$(document).on("click", ".delete", function(){
             $(this).parents("tr").remove();
-            alert($(this).parents("tr").attr("data-name"))
             var iid = $(this).parents("tr").attr("data-name");
-            <% int correct1 = %>=iid;
-            <%   evenementDao.delete( correct1 ); %>
-    		$(".add-new").removeAttr("disabled");
+            var url = new URL("http://localhost:8081/ProjetJEE/gestionEvenemennts.jsp");
+            url.searchParams.append('idd',iid);
+			window.history.pushState({}, '', url);
+			prompt("Est ce que vous voulez supprimer l'evenement numero ", url.searchParams.get("idd"))
+			
+			<% {
+    			EvenementDao evenementDao = new EvenementDao();
+    			String id = request.getParameter("idd");
+    			if(id!=null)
+                	evenementDao.delete(Integer.parseInt(request.getParameter("idd")));
+    			}%>
+    			$(".add-new").removeAttr("disabled");
+    		
         });
     });
     </script>
