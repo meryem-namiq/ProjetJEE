@@ -48,10 +48,7 @@ https://templatemo.com/tm-573-eduwell
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
                     <li><a href="index.jsp" class="active">Accueil</a></li>
-                    <li><a href="index.jsp">Services</a></li>
-                    <li><a href="index.jsp">Evénements</a></li>
-                    <li><a href="index.jsp">A propos</a></li> 
-                    <li><a href="index.jsp">Contacter-Nous</a></li> 
+                    <li><a href="index.jsp">Services</a></li> 
                     <li class="has-sub">
                         <a href="javascript:void(0)">Se connecter</a>
                         <ul class="sub-menu">
