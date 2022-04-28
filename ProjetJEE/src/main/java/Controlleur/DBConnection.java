@@ -13,7 +13,7 @@ public class DBConnection {
 	     Connection con = null;
 	     String url = "jdbc:mysql://127.0.0.1/ProjetJEE"; //MySQL URL and followed by the database name
 	     String username = "root"; //MySQL username
-	     String password = "2001"; //MySQL password   
+	     String password = "1299"; //MySQL password   
 	     try 
 	     {
 	         try 
