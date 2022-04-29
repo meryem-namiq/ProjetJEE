@@ -149,16 +149,14 @@ display: none;
                 <nav class="main-nav">
                   <!-- ***** Logo Start ***** -->
                   <a href="index.html" class="logo">
-                      <img src="assets/images/templatemo-eduwell.png" alt="EduWell Template">
+                      <img src="assets/images/logo.png">
                   </a>
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
-                    <li><a href="index.jsp" class="active">Accueil</a></li>
-                    <li><a href="index.jsp">Gerer les evenemnts</a></li>
-                    <li><a href="index.jsp">Gerer les participants</a></li>
-                    <li><a href="index.jsp">Gerer les commités</a></li> 
-                    <li><a href="index.jsp">chiii</a></li> 
+                    <li><a href="gestionEvenemennts.jsp">Gerer les evenemnts</a></li>
+                    <li><a href="gestionParticipants.jsp">Gerer les participants</a></li>
+                    <li><a href="gestionComites.jsp">Gerer les comités</a></li> 
                     
 
                   </ul>      

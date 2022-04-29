@@ -62,7 +62,7 @@ public class LoginAdmin extends HttpServlet {
         if(userValidate.equals("SUCCESS")) //If function returns success string then user will be rooted to Home page
          {
              request.setAttribute("userName", login); //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
-             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/adminMenu.jsp");
+             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/gestionEvenemennts.jsp");
 			 dispatcher.forward(request, response);
          }
          else
