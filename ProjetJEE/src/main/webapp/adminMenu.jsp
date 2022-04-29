@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>EduWell - Education HTML5 Template</title>
+    <title>Admin-Menu</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,10 +48,9 @@ https://templatemo.com/tm-573-eduwell
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
                     <li><a href="adminMenu.jsp" class="active">Accueil</a></li>
-                    <li><a href="gestionEvenemennts.jsp">Gerer les evenemnts</a></li>
-                    <li><a href="index.jsp">Gerer les participants</a></li>
-                    <li><a href="index.jsp">Gerer les commités</a></li> 
-                    <li><a href="index.jsp">chiii</a></li> 
+                    <li><a href="gestionEvenemennts.jsp">Gestion des evenemnts</a></li>
+                    <li><a href="index.jsp">Gestion des participants</a></li>
+                    <li><a href="index.jsp">Gestion des commites</a></li>
                     
 
                   </ul>      

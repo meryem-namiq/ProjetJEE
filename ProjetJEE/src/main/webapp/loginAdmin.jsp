@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>EduWell - Education HTML5 Template</title>
+    <title>Admin</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -82,7 +82,7 @@ https://templatemo.com/tm-573-eduwell
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-heading">
-                  <h4><em>Bonjour</em></h4>
+                  <h4><em>Bienvenue</em></h4>
                   </div>
               </div>
               <div class="col-lg-12">
