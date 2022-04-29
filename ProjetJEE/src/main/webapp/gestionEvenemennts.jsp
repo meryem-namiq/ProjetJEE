@@ -24,7 +24,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>EduWell - Education HTML5 Template</title>
+    <title>Administrateur</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -154,10 +154,11 @@ display: none;
                   <!-- ***** Logo End ***** -->
                   <!-- ***** Menu Start ***** -->
                   <ul class="nav">
+
                     <li><a href="gestionEvenemennts.jsp">Gerer les evenemnts</a></li>
                     <li><a href="gestionParticipants.jsp">Gerer les participants</a></li>
                     <li><a href="gestionComites.jsp">Gerer les comités</a></li> 
-                    
+
 
                   </ul>      
                   <a class='menu-trigger'>
@@ -179,9 +180,9 @@ display: none;
 <div class="table-wrapper">
 <div class="table-title">
 <div class="row">
-<div class="col-sm-8"><h2>Evenements <b>Details</b></h2></div>
+<div class="col-sm-8"><h2> Events <b>Details</b></h2></div>
 <div class="col-sm-4">
-<button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Ajouter un evenements</button>
+<button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Ajouter un evnements</button>
 </div>
 </div>
 </div>
