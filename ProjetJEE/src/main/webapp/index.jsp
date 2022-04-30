@@ -42,7 +42,7 @@ https://templatemo.com/tm-573-eduwell
               <div class="col-12">
                   <nav class="main-nav">
                       <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
+                      <a href="index.jsp" class="logo">
                           <img src="assets/images/logo.png">
                       </a>
                       <!-- ***** Logo End ***** -->
