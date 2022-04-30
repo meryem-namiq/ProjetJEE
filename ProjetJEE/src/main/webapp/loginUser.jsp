@@ -82,9 +82,10 @@ https://templatemo.com/tm-573-eduwell
             <div class="row">
               <div class="col-lg-12">
                 <div style="text-align: center;" class="section-heading"> 
-                <img src="assets/images/team-member-thumb-03.jpg"  style="width:70px;height:70px;"/>
+           
                                
-                  <h4 > <em>Bonjour Cher participant</em></h4>
+                  <h4 > <em>Bonjour Cher participant</em></h4><br>
+                       <img src="assets/images/userL.png"  style="width:90px;height:90px;"/>
                   </div>
               </div>
               <div class="col-lg-12">
