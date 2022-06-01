@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>JaxWs_Server</groupId>
+  <artifactId>JaxWs_Server</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>JaxWs_Server</name>
+  <build>
+  	<plugins>
+  		<plugin>
+  			 <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-war-plugin</artifactId>
+                   <version>3.1.0</version>
+                   <configuration>
+                   <failOnMissingWebXml>false</failOnMissingWebXml>
+                   </configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sun.xml.ws</groupId>
+  		<artifactId>jaxws-rt</artifactId>
+  		<version>2.3.3-b01</version>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>com.google.inject</groupId>
+  		<artifactId>guice</artifactId>
+  		<version>4.2.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>ch.qos.logback</groupId>
+  		<artifactId>logback-classic</artifactId>
+  		<version>1.3.0-alpha5</version>
+  	</dependency>
+  	<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.6.1</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.6.1</version>
+</dependency>
+  </dependencies>
+  
+</project>
